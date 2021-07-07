@@ -1,0 +1,162 @@
+/*************** Reset css **************/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/******************** reuseable ************/
+/*******************************************/
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+/***************************************/
+#main {
+
+}
+
+#header {
+    height: 46px;
+    background-color: #000;
+    z-index: 99;
+}
+#nav , .subnav{
+    list-style: none;
+}
+#nav li{
+
+    display: inline-block;
+    position: relative;
+    transition: all .5s;
+}
+#nav > li > a{
+    color: #fff;
+}
+#nav .subnav a{
+    color: #000;
+}
+#nav li a{
+    
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 46px;
+    margin: 0 24px;
+    display: block;
+    
+}
+#nav li:hover{
+    background-color: #ccc;
+}
+#nav li:hover a{
+    color: #333;
+    
+}
+#nav .subnav {
+    background-color: #fff;
+    position: absolute;
+    display: none;
+    box-shadow: 0px 0px 10px 1px rgba(0,0, 0, .8);
+    min-width: 160px;
+}
+#nav .subnav a{
+    line-height: 38px;
+}
+#nav li:hover .subnav{
+    display: block;
+}
+#nav .subnav li{
+    display: block;
+}
+/************* slider *************/
+#slider {
+    min-height: 100vh;
+    background-image:linear-gradient(45deg,rgba(0,0,0,.3)60%,rgb(20, 20, 63,55)), url('/image/max-bender-VmX3vmBecFE-unsplash.jpg');
+    margin-top: -40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.tittle-main{
+    margin-top: 40px;
+    text-align: center;
+    font-size: 200%;
+    padding-top: 60px;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+}
+.image-main{
+    display: inline-block;
+    margin: 20px;
+    margin-top: -20px;
+}
+h3 a{
+    
+    color: white;
+    text-decoration: none;
+    transition: all .5s;
+}
+.image-learing{
+    margin-top: 20px;
+    height: 250px;
+    width: 180px;
+    cursor: pointer;
+    transition: all .5s;
+}
+.image-learing:hover{
+    transform: scale(1.1);
+}
+h3:hover a{
+    font-size: 150%;
+}
+/************* amination for tittle ********/
+.container-ef{
+    display: flex;
+    justify-content: center;
+    max-width:1200px;
+    height: 250px;
+    margin: 0 auto;
+    margin-top: 40px;
+    align-items: center;
+  }
+  .text{
+    position: relative;
+    font-size: 2em;
+    /* background: #fff; */
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: .3em;
+    font-weight: bold;
+    padding: 5px;
+  }
+  .text span{
+    color: #fff;
+    mix-blend-mode: difference;
+  }
+  .text:before{
+    content:"";
+    position: absolute;
+    top:0;
+    width:10px;
+    height: 100%;
+    background: rgb(134, 133, 133);
+    animation: thangcover 3s linear infinite;
+  }
+  @keyframes thangcover {
+    0%{
+      left: 0;
+    }
+    50%{
+      left: calc( 100% - 25px);
+    }
+    100%{
+      left:0;
+    }
+  }
+/**************************************/
+#content {
+
+}
+
+#footer {
+
+}
