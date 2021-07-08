@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .rect-main{
+            position: relative; 
+            margin-top: 10%;
+            margin-left: 20%;
+        }
+        .circle{
+            position: absolute;
+            top: 33%;
+            left: 20%;
+        }
+        .rect-child{
+            position: absolute;
+            top: 33%;
+            left: 36%;
+        }
+    </style>
+</head>
+<body oncontextmenu="return false;">
+
+    <svg class="rect-main" height="300" width="500">
+        <rect width="400" height="200" rx="11" ry="11" style="fill: rgb(155, 212, 210); stroke: rgb(12, 12, 12); stroke-width: 1px;"/>
+    </svg>
+    <svg class="circle" width="150" height="150">
+     <circle cx="100" cy="50" r="40"
+      stroke="lightcoral" stroke-width="4" fill="moccasin" />   
+</svg>
+<svg class="rect-child" width="200" height="200">
+    <rect width="80" height="130" rx="11" ry="11" style="fill: rgb(10, 73, 71); stroke: rgb(12, 12, 12); stroke-width: 1px;"/>
+</svg>
+</body>
+</html>

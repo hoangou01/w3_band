@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style >
+        table{
+            border: solid #000 1px;
+        }
+        textarea{
+            height: 100px;
+            width: 500px;
+        }
+        th{
+            border: solid #000 1px;
+        }
+        body{
+            background: #ffd89b; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ffd89b, #19547b); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffd89b, #19547b);
+  
+        }
+    </style>
+    
+</head>
+<body oncontextmenu="return false;">
+    <table border="1">
+        <form >
+        <tr>
+            <td>Họ Tên :</td>
+            <td><input type="text" id="name" name="name" placeholder="nhập tên bạn ở đây!"></td>
+        </tr>
+        <br>
+        <tr>
+            <td>giới tính :</td>
+            <td><input type="radio" value="nữ" id="sex" name="sex">Nữ<input type="radio" value="nam" id="sex" name="sex">nam</td>
+        </tr>
+    
+        <tr>
+            <td>Điều bạn quan tâm :</td>
+            <td><input type="checkbox" id="care" name="care"> Kinh tế <input type="checkbox" id="care" name="care"> Xã hội <input type="checkbox" id="care" name="care"> giải trí</td>
+        </tr>
+        
+        <tr>
+            <td>Địa chỉ :</td>
+            <td><textarea name="adress" id="adress"  ></textarea></td>
+        </tr>
+        <tr>
+            <td>học vấn :</td>
+            <td><select name="education" id="education" name="education">
+                <option value="đại học" id="education" name="education">đại học</option>
+                <option value="cao đẳng" id="education" name="education">cao đẳng</option>
+                <option value="trung cấp" id="education" name="education">trung cấp</option>
+                <option value="THPT" id="education" name="education">THPT</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td><button >gửi thông tin</button> <button type="reset">nhập lại</button></td>
+        </tr>
+        
+        </form>
+    </table>
+
+</body>
+
+</html>
