@@ -1,0 +1,32 @@
+@charset "utf8";
+.same{
+    border: 2px solid #000;
+}
+body{
+    font-size: 20px;
+}
+.main{
+    border: 2px solid #000;
+}
+.a{
+    font-weight: bold;
+    font-size: 26px;
+    background-color: rgb(185, 184, 184);
+}
+span{
+    
+    background-color: rgb(172, 168, 168);
+    font-weight: 600;
+}
+.span-solid{
+    border: 2px solid #000;
+}
+.span-dotted{
+    border: 2px dotted red;
+}
+p{
+    padding: 5px;
+}
+#dotted{
+    border: 2px dotted blue;
+}

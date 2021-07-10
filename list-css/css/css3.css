@@ -1,0 +1,34 @@
+@charset "utf8";
+body {
+    color:#000000;
+    background-color:#ffffff;
+    font-size:12px;
+    font-family:arial, verdana, sans-serif;
+   }
+   #summary{
+       background-color: yellow;
+   }
+   p{
+       padding: 10px;
+   }
+   p[id] {border:1px solid #000000;}
+   p[class ~= "XHTML"]{
+       border: 4px solid #000000;
+   }
+   p[language |="en"]{
+       background-color: #000000;
+       color: #ffffff;
+   }
+   .begins{
+       background-color: aqua;
+       color: purple;
+       border: 3px solid rgb(46, 39, 25);
+   }
+   .contains{
+       background-color: rgb(8, 212, 212);
+       color: #000;
+   }
+   .suffix{
+       border: 1px solid #000;
+       color: brown;
+   }
