@@ -1,0 +1,85 @@
+@charset "utf8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    color: seagreen;
+    text-transform: capitalize;
+    font-size: 250%;
+    margin-bottom: 20px;
+}
+.menu{
+    width: 100%;
+    margin-bottom: 40px;
+    background-color: rgb(101, 209, 252);
+}
+.menu .navbar{
+    display: inline-block;
+    margin-left: 20px;
+    
+}
+.menu .navbar li{
+    display: inline-block;
+    line-height: 60px;
+    padding: 0 10px;
+}
+.menu .navbar li:hover{
+    background-color: white;
+}
+.menu .navbar li:hover a{
+    color: black;
+}
+h2{
+    display: inline-block;
+    margin-left: 20px;
+    line-height: 55px;
+}
+h2:hover a{
+    font-size: 30px;
+}
+h2 a{
+    
+    color: yellow;
+    text-shadow: 6px 5px #000;
+    font-size: 28px;
+    text-decoration: none;
+    transition: all .5s;
+}
+.menu .navbar li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+p a{
+    float: right;
+    margin-top: -45px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+}
+p:hover a{
+    color: black;
+}
+span{
+    font-size: 24px;
+    color: green;
+}
+.btn{
+    margin: 10px 20px;
+    /* height: 30px; */
+    width: 80px;
+    border-radius: 5px;
+    background-color: rgb(71, 157, 255);
+}
+.btn a{
+    line-height: 40px;
+    color: white;
+    text-decoration: none;
+    padding-left: 15px;
+}
+.btn:hover{
+    background-color: red;
+    color: black;
+}

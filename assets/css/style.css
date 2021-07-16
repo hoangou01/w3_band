@@ -4,8 +4,29 @@
     margin: 0;
     box-sizing: border-box;
 }
+/******************** font **************************/
+/*************************************************/
+
+.nav-down{
+    color: white;
+}
+.search-div{
+    float: right;
+    line-height: 40px;
+    padding: 0 18px; 
+    padding-top: 5px;  
+}
+.search-div:hover{
+    background-color: red;
+}
+.search{
+    font-size: 22px;
+    color: white;
+}
+/*************************************************/
 /******************** reuseable ************/
 /*******************************************/
+
 html{
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -21,6 +42,9 @@ html{
 }
 #nav , .subnav{
     list-style: none;
+}
+#nav{
+    display: inline-block;
 }
 #nav li{
 
@@ -48,7 +72,6 @@ html{
 }
 #nav li:hover a{
     color: #333;
-    
 }
 #nav .subnav {
     background-color: #fff;

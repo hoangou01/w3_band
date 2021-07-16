@@ -1,0 +1,13 @@
+@charset "utf8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div{
+    border: 1px solid #000;
+}
+.bootstrap{
+    background-color: turquoise;
+    height: 100px;
+}
