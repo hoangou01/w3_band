@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function tinh(){
+            var so1 = document.getElementById("first").value;
+            var so2 = document.getElementById("second").value;
+
+            if(document.getElementById("cong").checked){
+                var tong = so1 + so2;
+                document.getElementById("kq").innerHTML = tong;
+            }else if(document.getElementById("tru").checked){
+                document.getElementById("kq").innerHTML = so1 - so2;
+            }else if (document.getElementById("nhan").checked){
+                document.getElementById("kq").innerHTML = so1 * so2;
+            }else if (document.getElementById("chia").checked){
+                document.getElementById("kq").innerHTML = so1 / so2;
+            }
+        }
+    </script>
+</head>
+<body>
+    <table border="1">
+        <form >
+            <tr>
+                <th colspan="2"><h2>các phép tính số học</h2></th>
+            </tr>
+            <tr>
+                <td>
+                    <label for="first">số thứ 1</label>
+                </td>
+                <td>
+                    <input type="number" id="first" name="txtfirst">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="second">số thứ 2</label>
+                </td>
+                <td>
+                    <input type="number" id="second" name="txtsecond">
+                </td>
+            </tr>
+            <tr>
+                <td><label >chọn phép toán</label></td>
+                <td><input type="radio" id="cong" name="tinh" >cộng
+                    <input type="radio" id="tru" name="tinh" >trừ
+                    <input type="radio" id="nhan" name="tinh" >nhân 
+                    <input type="radio" id="chia" name="tinh" >chia
+                </td>
+
+            </tr>
+        
+        </form>
+    </table>
+    <button onclick="tinh()" >thực hiện</button>
+    <p id="kq"></p>
+</body>
+</html>

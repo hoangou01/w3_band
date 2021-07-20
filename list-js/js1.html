@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>chương trình tính tuổi</h1>
+    <table border="1">
+        <form >
+            <tr>
+                <td><label for="name">nhập tên của bạn:</label></td>
+                <td><input type="text" name="txtname" id="name" placeholder="nhập tên bạn ở đây"></td>
+            </tr>
+            <tr>
+                <td><label for="age">nhập năm sinh của bạn:</label></td>
+                <td><input type="number" min="1900" max="2022" name="txtborn" id="born" placeholder="nhập năm sinh bạn ở đây"></td>
+            </tr>
+           
+        </form>
+    </table>
+    <button type="submit" onclick="tinhTuoi()">tính tuổi</button>
+    <p id="kq"></p>
+    <script>
+        var nam = new Date().getFullYear() +1;
+        function tinhTuoi(){
+        var today = new Date();
+        var today_year = today.getFullYear();
+        var born = document.getElementById("born").value;
+        var age = today_year - born;
+        var name = document.getElementById("name").value;
+        document.getElementById("kq").innerHTML = "tên của bạn : " + name + "<br>" + "tuổi : " +age;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+        function tinh(form){
+            var a = document.getElementById("first").value;
+            var b = document.getElementById("second").value;
+            var c = document.getElementById("third").value;
+            if(a == 0){
+                if (b == 0){
+                    document.getElementById("kq").innerHTML = "phương trình vô nghiệm";
+                    
+                }else {
+                    document.getElementById("kq").innerHTML = "phương trình có 1 nghiệm x = " + (-c/b);
+                }
+                return;
+            }
+            var delta = b*b -(4*a*c);
+            var x1;
+            var x2;
+            if (delta > 0){
+                x1 = (-b + Math.sqrt(delta)) / (2*a);
+                x2 = (-b - Math.sqrt(delta)) / (2*a);
+                document.getElementById("kq").innerHTML = "phương trình có 2 nghiệm x1 = " + x1
++ "; x2 = " + x2;
+            }
+            else if (delta == 0){
+                document.getElementById("kq").innerHTML ="phương trình có 1 nghiệm x = " + (-b/(2*a));
+                    
+             }
+            else {
+                document.getElementById("kq").innerHTML = "phương trình vô nghiệm!";
+            }
+        }
+    </script>
+</head>
+<body>
+    <table border="1">
+       <form >
+        <tr>
+            <th colspan="2"><h2>chương trình giải phương trình bậc 2</h2></th>
+        </tr>
+
+    <tr>
+        <td>a=</td>
+        <td><input type="number" id="first" name="txtFirst"></td>
+    </tr>
+    <tr>
+        <td>b=</td>
+        <td><input type="number" id="second" name="txtSecond"></td>
+    </tr>
+    <tr>
+        <td>b=</td>
+        <td><input type="number" id="third" name="txtThird"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><button type="button" onclick="tinh(this.form)">Giai</button><button type="reset" value="Reset">xóa</button></td>
+    </tr>
+       </form>
+    </table>
+    <p id="kq"><b></b></p>
+</body>
+</html>
