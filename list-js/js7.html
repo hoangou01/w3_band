@@ -5,25 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-        function dangky(){
-            var ten = document.getElementById("name").value;
-            var matkhau = document.getElementById("password").value;
-            var dodaiMk = matkhau.length;
-            var sex;
-            if (document.getElementById("nam").checked){
-                sex = document.getElementById("nam").value;
-            } else if (document.getElementById("nu").checked){
-                sex = document.getElementById("nu").value;
-            }
-            var ngaySinh = document.getElementById("born").value;
-            var quantam = document.getElementById("care").value;
-            document.getElementById("kq").innerHTML = "chào mừng " + ten + "\nbạn là " + sex + "\nmật khẩu của bạn có " + dodaiMk +" ký tự" + "\nbạn sinh ngày " + ngaySinh + "\nvấn đề bạn quan tâm là " + quantam;
-        }
-    </script>
+    
     
 </head>
-<body>
+<body oncontextmenu="return false;">
     <table border="1">
         <form >
             <tr>
@@ -76,5 +61,21 @@
             </tr>
         </form>
     </table>
+    <script>
+        function dangky(){
+            var ten = document.getElementById("name").value;
+            var matkhau = document.getElementById("password").value;
+            var dodaiMk = matkhau.length;
+            var sex;
+            if (document.getElementById("nam").checked){
+                sex = document.getElementById("nam").value;
+            } else if (document.getElementById("nu").checked){
+                sex = document.getElementById("nu").value;
+            }
+            var ngaySinh = document.getElementById("born").value;
+            var quantam = document.getElementById("care").value;
+            document.getElementById("kq").innerHTML = "chào mừng " + ten + "\nbạn là " + sex + "\nmật khẩu của bạn có " + dodaiMk +" ký tự" + "\nbạn sinh ngày " + ngaySinh + "\nvấn đề bạn quan tâm là " + quantam;
+        }
+    </script>
 </body>
 </html>

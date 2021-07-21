@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body oncontextmenu="return false;">
+    <label >Nhập số phần tử :</label>
+    <input type="number" id="so" name="nbSoPhanTu" placeholder="nhập số phần tử ở đây">
+    <br>
+    <button onclick="taomang()">Tạo Mảng</button>
+    <button onclick="sapxeptang()">sắp xếp tăng</button>
+    <button onclick="sapxepgiam()">sắp xếp giảm</button><br>
+    Mảng ban đầu<p id="first"></p>
+    Mảng tăng dần<p id="increase"></p>
+    Mảng giảm dần<p id="decrease"></p>
+    <script>
+        function taomang(){
+            var n = document.getElementById("so").value;
+            var mangbandau = "";
+            arrFirst = new Array(n);
+            for(var i = 0 ; i < n ; i++){
+                arrFirst[i] = Math.floor(Math.random()*51);
+                mangbandau += arrFirst[i] + "\t";
+            }
+            document.getElementById("first").innerHTML = mangbandau;
+        }
+        function sapxeptang(){
+            document.getElementById("increase").innerHTML = arrFirst.sort(function(a,b){return a - b});
+        }
+        function sapxepgiam(){
+            document.getElementById("decrease").innerHTML = arrFirst.sort(function(a,b){return b - a});
+        }
+    </script>
+</body>
+</html>
