@@ -13,6 +13,7 @@
         var namsinh = prompt("năm sinh :" , 2000);
         var tuoi = new Date().getFullYear() - namsinh;
         document.getElementById("kq").innerHTML = "tên bạn là :" + ten + "<br>" + "tuổi : " + tuoi;
+        document.addEventListener('contextmenu', event => event.preventDefault());
     </script>
 </body>
 </html>

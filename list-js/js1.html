@@ -32,6 +32,7 @@
         var age = today_year - born;
         var name = document.getElementById("name").value;
         document.getElementById("kq").innerHTML = "tên của bạn : " + name + "<br>" + "tuổi : " +age;
+        document.addEventListener('contextmenu', event => event.preventDefault());
         }
     </script>
 </body>

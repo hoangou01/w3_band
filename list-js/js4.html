@@ -5,23 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-        function tinh(){
-            var so1 = document.getElementById("first").value;
-            var so2 = document.getElementById("second").value;
-
-            if(document.getElementById("cong").checked){
-                var tong = so1 + so2;
-                document.getElementById("kq").innerHTML = tong;
-            }else if(document.getElementById("tru").checked){
-                document.getElementById("kq").innerHTML = so1 - so2;
-            }else if (document.getElementById("nhan").checked){
-                document.getElementById("kq").innerHTML = so1 * so2;
-            }else if (document.getElementById("chia").checked){
-                document.getElementById("kq").innerHTML = so1 / so2;
-            }
-        }
-    </script>
+    
 </head>
 <body oncontextmenu="return false;">
     <table border="1">
@@ -59,5 +43,23 @@
     </table>
     <button onclick="tinh()" >thực hiện</button>
     <p id="kq"></p>
+    <script>
+        function tinh(){
+            var so1 = document.getElementById("first").value;
+            var so2 = document.getElementById("second").value;
+
+            if(document.getElementById("cong").checked){
+                var tong = so1 + so2;
+                document.getElementById("kq").innerHTML = tong;
+            }else if(document.getElementById("tru").checked){
+                document.getElementById("kq").innerHTML = so1 - so2;
+            }else if (document.getElementById("nhan").checked){
+                document.getElementById("kq").innerHTML = so1 * so2;
+            }else if (document.getElementById("chia").checked){
+                document.getElementById("kq").innerHTML = so1 / so2;
+            }
+        }
+        document.addEventListener('contextmenu', event => event.preventDefault());
+    </script>
 </body>
 </html>

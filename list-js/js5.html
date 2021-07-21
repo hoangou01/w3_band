@@ -19,6 +19,7 @@
             var str2  = strSecond.substr(strSecond.length-1) + strSecond.substr(0 , strSecond.length-1);
             document.getElementById("second").innerHTML= str2;
         },900)
+        document.addEventListener('contextmenu', event => event.preventDefault());
     </script>
 </body>
 </html>
