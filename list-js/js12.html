@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #main{
+        height: 100px;
+        width: 100%;
+    }
+    #main--text{
+        font-size: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        line-height: 100px;
+    }
+</style>
+<script>
+    function change(){
+        var s = document.getElementById("first").value;
+    document.getElementById("main--text").innerHTML = s;
+    document.getElementById("main--text").style.color = document.getElementById("color").value;
+    document.getElementById("main").style.backgroundColor = document.getElementById("bgcolor").value;
+
+    }
+  
+</script>
+<body>
+    <div id="main">
+        <h1 id="main--text">
+            
+        </h1>
+    </div>
+    <br><br>
+    nhập nội dung : <input type="text" id="first" size="50"><br><br>
+    màu nền : <input type="color" id="bgcolor"><br><br>
+    màu chữ : <input type="color" id="color"><br><br>
+    <button onclick="change()">thực hiện</button>
+</body>
+</html>

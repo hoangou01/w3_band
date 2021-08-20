@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #image{
+            margin-top: 30px;
+        }
+    </style>
+    <script>
+        function verysmall(){
+            document.getElementById("image").style.transform = "scale(1)";
+        }
+        function small(){
+            document.getElementById("image").style.transform = "scale(1.1,1.1)";
+        }
+        function normal(){
+            document.getElementById("image").style.transform = "scale(1.25,1.25)";
+        }
+        function big(){
+            document.getElementById("image").style.transform = "scale(1.5,1.5)";
+        }
+    </script>
+</head>
+<body>
+    <h3>image resizing</h3>
+    scale: 
+    <input type="radio" checked onclick="verysmall()">0%
+    <input type="radio" onclick="small()">10%
+    <input type="radio" onclick="normal()">25%
+    <input type="radio" onclick="big()">50%
+    <br><br>
+    <img src="../image/coffee.jpg" alt="" id="image"
+    height="100px" width="200px">
+</body>
+</html>

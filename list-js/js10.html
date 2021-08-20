@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th colspan="2"><h1>xử lý chuỗi</h1></th>
+        </tr>
+        <tr>
+            <td>Chuỗi ban đầu :</td>
+            <td><input type="text" id="first"></td>
+
+        </tr>
+        <tr>
+            <td></td>
+            <td><button onclick="daonguoc()">Đảo ngược</button><button onclick="chuanhoa()">Chuẩn hóa</button></td>
+        </tr>
+    </table>
+    <script>
+        function daonguoc(){
+            var first = document.getElementById("first").value;
+            var result = first.replace().split(/\s/).reverse().join(" ");
+            document.getElementById("first").value = result;
+        }
+        function chuanhoa(){
+            var first = document.getElementById("first").value;
+            var firstString = first.replace(/\s\s+/g, " ").split(" ");
+            var sodem = firstString.length;
+            var result1 = "";
+            for ( var i = 0 ; i < sodem ; i++){
+               firstString[i] = firstString[i].charAt(0).toUpperCase() + firstString[i].slice(1).toLowerCase() + " ";
+               result1 += firstString[i];
+            }
+            
+            document.getElementById("first").value = result1;
+
+        }
+        document.addEventListener('contextmenu', event => event.preventDefault());
+    </script>
+</body>
+</html>

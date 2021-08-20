@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+       <tr>
+            <td>chuỗi ban đầu :</td>
+            <td><input type="text" name="txtfirst" id="first">
+                </td>
+       </tr>
+       <tr>
+        <td>Chuỗi bị thay thế :</td>
+        <td><input type="text" name="txtBeChange" id="BeChange"></td>
+       </tr>
+       <tr>
+            <td>Chuỗi thay thế :</td>
+            <td><input type="text" name="txtchange" id="Change"></td>
+       </tr>
+       <tr>
+            <td colspan="2"><button onclick="thaythe()">thay thế</button></td>
+       </tr>
+    </table>
+    
+    <script>
+        function thaythe(){
+            var first = document.getElementById("first").value;
+        var second = document.getElementById("BeChange").value;
+        var third = document.getElementById("Change").value;
+        var result = first.replace(new RegExp(second,'i'),third);
+        document.getElementById("first").value = result;
+        }
+        document.addEventListener('contextmenu', event => event.preventDefault());
+    </script>
+</body>
+</html>

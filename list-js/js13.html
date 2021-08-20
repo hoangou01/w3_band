@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        #main{
+            width: 100%;
+            height: 100px;
+            text-align: center;
+        }
+        .both{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="first">Thay đổi style</h1>
+    <input type="radio" id="default" checked onclick="location.reload()">mặc định <br>
+    <input type="radio" id="style" onclick="change()">áp dụng style
+    <div id="main">
+        <p class="both">click vào tùy chọn "mặc định" chuyển về dạng mặc định</p>
+        <p class="both">click vào tùy chọn "áp dụng style" để áp dụng style định dạng</p>
+    </div>
+    <script>
+        function change(){
+            document.getElementById("first").style.color = "green";
+            document.getElementById("main").style.backgroundColor = "yellow";
+            
+            var x = document.getElementById("main");
+            x.getElementsByClassName("both")[0].style.color = "blue";
+            x.getElementsByClassName("both")[1].style.color = "blue";
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function parseString(){
+            var s = document.getElementById("text1").value;
+            var arr = s.split(" ");
+            var i , word = 0;
+            var arrkq = [];
+            for ( i = 0 ; i < 128 ; i++){
+                arrkq[i] = 0;
+            }
+            for ( i = 0 ; i < arr.length ; i++){
+                word += arr[i].length;
+            }
+            var kq = "Character : " + arr.length + "<br>" + "word :" + word + "<br>";
+            for (i = 0 ; i < s.length ; i++){
+                if ( s.charCodeAt(i) == 'a' && s.charCodeAt(i) == 'z')  
+                    arrkq[s.charCodeAt(i) -32 ]++;
+                else
+                    arrkq[s.charCodeAt(i)]++;
+            }
+            for ( i =0 ; i < arrkq.length ; i++){
+                if ( arrkq[i] > 0){
+                    kq += "Character " + "'" + String.fromCharCode(i) + "' : " + arrkq[i] + "<br>";
+                }
+                document.getElementById("kq").innerHTML = kq;
+
+            }
+        }
+    </script>
+    <style>
+        .btn{
+            text-align: center;
+            height: 30px;
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+       <caption><h3>Statics</h3></caption>
+        <tr>
+            <td>
+                string :
+            </td>
+            <td>
+                <input type="text" id="text1" size="50">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                
+            </td>
+            <td>
+                <button class="btn" onclick="parseString()">chuyển</button>
+            </td>
+        </tr>
+        <tr>
+           <td colspan="2" id="kq"></td>
+        </tr>
+    </table>
+</body>
+</html>
