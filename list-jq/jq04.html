@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        div{
+            height: 100px;
+            width: 150px;
+            display: inline-block;
+            margin-left: 10px;
+        }
+        #div2{
+            background-color: rgb(255, 0, 0);
+        }
+        #div1{
+            background-color: rgb(0, 0, 255);
+        }
+        #div4{
+            background-color: rgb(0, 255, 0);
+        }
+        #div3{
+            background-color: rgb(255, 0, 255);
+        }
+    </style>
+</head>
+<body>
+    <p>click lên các ô vuông</p>
+   <div id="div1"></div>
+   <div id="div2"></div>
+   <div id="div3"></div>
+   <div id="div4"></div>
+<p id="kq"></p>
+<script>
+    
+    $(document).ready(function(){
+        
+        $('div').click(function(){
+            
+            var bgcolor = $(this).css('background-color');
+            $('#kq').text('màu của ô này là ' + bgcolor).css({"color" : bgcolor})
+        })
+    })
+</script>
+</body>
+</html>
